@@ -24,7 +24,7 @@ body {
 }
 
 .hero-overlay {
-    background: linear-gradient(135deg, rgba(12, 35, 64, 0.95) 0%, rgba(26, 31, 54, 0.90) 50%, rgba(12, 35, 64, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(12, 35, 64, 0.70) 0%, rgba(26, 31, 54, 0.65) 50%, rgba(12, 35, 64, 0.60) 100%);
     position: absolute;
     inset: 0;
 }
@@ -42,7 +42,7 @@ body {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: #ffffff !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero .lead {
@@ -52,7 +52,7 @@ body {
     line-height: 1.6;
     max-width: 600px;
     color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .page-hero {
