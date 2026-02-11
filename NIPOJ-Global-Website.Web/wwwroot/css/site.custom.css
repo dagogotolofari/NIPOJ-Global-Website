@@ -102,6 +102,9 @@ body {
     color: var(--brand-steel);
     padding: 0.5rem 1rem !important;
     transition: color 0.2s ease;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 .navbar .nav-link:hover {
@@ -112,8 +115,10 @@ body {
     color: var(--brand-navy);
     font-weight: 600;
     position: relative;
-    text-decoration: none;
-    border-bottom: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 .navbar .nav-link.active::after {
@@ -294,13 +299,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-footer {
-    background-color: var(--brand-midnight);
-    color: rgba(255, 255, 255, 0.7);
+    background-color: var(--brand-midnight) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
     padding: 2rem 0;
 }
 
 .site-footer .text-muted {
     color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.site-footer h3,
+.site-footer h4,
+.site-footer h5 {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .bg-dark {
