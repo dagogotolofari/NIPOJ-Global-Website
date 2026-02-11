@@ -9,38 +9,47 @@
 else
 {
     <div class="page-hero">
-        <h1 class="display-6 fw-semibold">Policies</h1>
-        <p class="text-muted mb-0">@content.MissionText</p>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-12 col-lg-6">
-            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
-                <h2 class="h5 text-uppercase text-primary">Quality Policy & Objectives</h2>
-                <ul class="text-muted mb-0">
-                    @foreach (var item in content.QualityPolicyObjectives)
-                    {
-                        <li>@item</li>
-                    }
-                </ul>
-            </div>
-        </div>
-        <div class="col-12 col-lg-6">
-            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
-                <h2 class="h5 text-uppercase text-primary">Local Content Policy</h2>
-                <ul class="text-muted mb-0">
-                    @foreach (var item in content.LocalContentPolicy)
-                    {
-                        <li>@item</li>
-                    }
-                </ul>
-            </div>
+        <div class="container">
+            <h1 class="fw-bold mb-3">Policies</h1>
+            <div class="section-divider"></div>
+            <p class="lead text-muted mb-0" style="max-width: 700px;">@content.MissionText</p>
         </div>
     </div>
 
-    <div class="mt-4">
-        <a class="btn btn-primary" href="assets/company-profile.pdf" target="_blank" rel="noopener noreferrer">Download Company Profile</a>
-    </div>
+    <section class="page-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-6">
+                    <div class="border rounded p-4 h-100 bg-white shadow">
+                        <h2 class="h5 fw-bold mb-4">Quality Policy & Objectives</h2>
+                        <ul class="mb-0" style="line-height: 1.8;">
+                            @foreach (var item in content.QualityPolicyObjectives)
+                            {
+                                <li class="text-muted mb-2">@item</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="border rounded p-4 h-100 bg-white shadow">
+                        <h2 class="h5 fw-bold mb-4">Local Content Policy</h2>
+                        <ul class="mb-0" style="line-height: 1.8;">
+                            @foreach (var item in content.LocalContentPolicy)
+                            {
+                                <li class="text-muted mb-2">@item</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" style="background-color: rgba(12, 35, 64, 0.02);">
+        <div class="container text-center">
+            <a class="btn btn-primary btn-lg" href="assets/company-profile.pdf" target="_blank" rel="noopener noreferrer">Download Company Profile</a>
+        </div>
+    </section>
 }
 
 @code {

@@ -9,41 +9,53 @@
 else
 {
     <div class="page-hero">
-        <h1 class="display-6 fw-semibold">Partners</h1>
-        <p class="text-muted mb-0">@content.PartnershipsText</p>
+        <div class="container">
+            <h1 class="fw-bold mb-3">Partners</h1>
+            <div class="section-divider"></div>
+            <p class="lead text-muted mb-0" style="max-width: 800px;">@content.PartnershipsText</p>
+        </div>
     </div>
 
-    <div class="page-section">
-        <h2 class="h5 text-uppercase text-primary mb-3">Certifications</h2>
-        <ul class="text-muted mb-0">
-            @foreach (var certification in content.Certifications)
-            {
-                <li>@certification</li>
-            }
-        </ul>
-    </div>
+    <section class="page-section">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-3">Certifications</h2>
+            <div class="section-divider"></div>
+            <ul class="lead mb-0" style="line-height: 2;">
+                @foreach (var certification in content.Certifications)
+                {
+                    <li class="text-muted">@certification</li>
+                }
+            </ul>
+        </div>
+    </section>
 
     @if (assetManifest.Certs.Any())
     {
-        <div class="page-section">
-            <h2 class="h5 text-uppercase text-primary mb-4">Partner & Certification Badges</h2>
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center text-center">
-                @foreach (var cert in assetManifest.Certs)
-                {
-                    <div class="col">
-                        <div class="card h-100 shadow-sm image-card border-0">
-                            <img class="card-img-top" src="@cert" alt="Certification badge" />
+        <section class="page-section" style="background-color: rgba(12, 35, 64, 0.02);">
+            <div class="container">
+                <h2 class="h3 fw-bold mb-3">Partner & Certification Badges</h2>
+                <div class="section-divider"></div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
+                    @foreach (var cert in assetManifest.Certs)
+                    {
+                        <div class="col">
+                            <div class="card h-100 border shadow-sm p-4 bg-white text-center">
+                                <img class="mx-auto" src="@cert" alt="Certification badge" style="max-height: 100px; object-fit: contain; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)';" onmouseout="this.style.filter='grayscale(100%)';" />
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
-        </div>
+        </section>
     }
 
-    <div class="page-section">
-        <h2 class="h5 text-uppercase text-primary mb-3">Partnerships</h2>
-        <p class="text-muted mb-0">@content.PartnershipsText</p>
-    </div>
+    <section class="page-section">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-3">Partnerships</h2>
+            <div class="section-divider"></div>
+            <p class="lead text-muted mb-0" style="max-width: 800px; line-height: 1.8;">@content.PartnershipsText</p>
+        </div>
+    </section>
 }
 
 @code {

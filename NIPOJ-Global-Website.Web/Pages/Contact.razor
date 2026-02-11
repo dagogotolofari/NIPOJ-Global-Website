@@ -10,61 +10,72 @@
 else
 {
     <div class="page-hero">
-        <h1 class="display-6 fw-semibold">Contact</h1>
-        <p class="text-muted mb-0">@content.Tagline</p>
+        <div class="container">
+            <h1 class="fw-bold mb-3">Contact</h1>
+            <div class="section-divider"></div>
+            <p class="lead text-muted mb-0" style="max-width: 700px;">@content.Tagline</p>
+        </div>
     </div>
 
-    <div class="row g-4">
-        <div class="col-12 col-lg-5">
-            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
-                <h2 class="h5 text-uppercase text-primary">Contact Details</h2>
-                <dl class="mt-3 mb-0">
-                    <dt class="text-muted small text-uppercase">Address</dt>
-                    <dd class="mb-3">@content.Contact.Address</dd>
-                    <dt class="text-muted small text-uppercase">Email</dt>
-                    <dd class="mb-3">@content.Contact.Email</dd>
-                    <dt class="text-muted small text-uppercase">Phone</dt>
-                    <dd class="mb-3">@PhoneSummary</dd>
-                    <dt class="text-muted small text-uppercase">Website</dt>
-                    <dd class="mb-0">@content.Contact.Website</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="col-12 col-lg-7">
-            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
-                <h2 class="h5 text-uppercase text-primary">Send a Message</h2>
-                <EditForm Model="formModel" OnValidSubmit="HandleValidSubmit" class="mt-3">
-                    <DataAnnotationsValidator />
-                    <ValidationSummary class="text-danger" />
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label" for="contactName">Name</label>
-                            <InputText id="contactName" class="form-control" @bind-Value="formModel.Name" />
-                            <ValidationMessage For="() => formModel.Name" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label" for="contactEmail">Email</label>
-                            <InputText id="contactEmail" class="form-control" @bind-Value="formModel.Email" />
-                            <ValidationMessage For="() => formModel.Email" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label" for="contactPhone">Phone</label>
-                            <InputText id="contactPhone" class="form-control" @bind-Value="formModel.Phone" />
-                            <ValidationMessage For="() => formModel.Phone" />
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label" for="contactMessage">Message</label>
-                            <InputTextArea id="contactMessage" class="form-control" rows="5" @bind-Value="formModel.Message" />
-                            <ValidationMessage For="() => formModel.Message" />
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
+    <section class="page-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-5">
+                    <div class="border rounded p-4 h-100 bg-white shadow">
+                        <h2 class="h5 fw-bold mb-4">Contact Details</h2>
+                        <dl class="mb-0">
+                            <dt class="text-uppercase small fw-semibold mb-2" style="color: var(--brand-steel); letter-spacing: 0.05em;">Address</dt>
+                            <dd class="mb-4 lead" style="font-size: 1rem; line-height: 1.6;">@content.Contact.Address</dd>
+                            <dt class="text-uppercase small fw-semibold mb-2" style="color: var(--brand-steel); letter-spacing: 0.05em;">Email</dt>
+                            <dd class="mb-4">
+                                <a href="mailto:@content.Contact.Email" class="text-decoration-none" style="color: var(--brand-gold); font-weight: 500;">@content.Contact.Email</a>
+                            </dd>
+                            <dt class="text-uppercase small fw-semibold mb-2" style="color: var(--brand-steel); letter-spacing: 0.05em;">Phone</dt>
+                            <dd class="mb-4">@PhoneSummary</dd>
+                            <dt class="text-uppercase small fw-semibold mb-2" style="color: var(--brand-steel); letter-spacing: 0.05em;">Website</dt>
+                            <dd class="mb-0">
+                                <a href="https://@content.Contact.Website" target="_blank" class="text-decoration-none" style="color: var(--brand-gold); font-weight: 500;">@content.Contact.Website</a>
+                            </dd>
+                        </dl>
                     </div>
-                </EditForm>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="border rounded p-4 h-100 bg-white shadow">
+                        <h2 class="h5 fw-bold mb-4">Send a Message</h2>
+                        <EditForm Model="formModel" OnValidSubmit="HandleValidSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary class="text-danger mb-3" />
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold" for="contactName">Name</label>
+                                    <InputText id="contactName" class="form-control" @bind-Value="formModel.Name" placeholder="Your full name" />
+                                    <ValidationMessage For="() => formModel.Name" class="text-danger small" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label fw-semibold" for="contactEmail">Email</label>
+                                    <InputText id="contactEmail" class="form-control" @bind-Value="formModel.Email" placeholder="your@email.com" />
+                                    <ValidationMessage For="() => formModel.Email" class="text-danger small" />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label fw-semibold" for="contactPhone">Phone</label>
+                                    <InputText id="contactPhone" class="form-control" @bind-Value="formModel.Phone" placeholder="+234 800 000 0000" />
+                                    <ValidationMessage For="() => formModel.Phone" class="text-danger small" />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold" for="contactMessage">Message</label>
+                                    <InputTextArea id="contactMessage" class="form-control" rows="6" @bind-Value="formModel.Message" placeholder="How can we help you?" />
+                                    <ValidationMessage For="() => formModel.Message" class="text-danger small" />
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 }
 
 @code {
