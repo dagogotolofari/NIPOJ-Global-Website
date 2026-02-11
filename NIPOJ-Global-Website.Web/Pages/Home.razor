@@ -61,13 +61,30 @@ else
         </div>
     </section>
 
-    <section class="bg-dark text-white py-5">
-        <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
-            <div>
-                <h2 class="h4 fw-semibold mb-1">Ready to work with us?</h2>
-                <p class="mb-0 text-white-50">@content.PartnershipsText</p>
+    <section class="cta-section text-white py-5 position-relative overflow-hidden">
+        <div class="cta-pattern"></div>
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-8">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="cta-accent-line"></div>
+                        <span class="text-uppercase" style="color: var(--brand-gold); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.1em;">Partner With Excellence</span>
+                    </div>
+                    <h2 class="display-6 fw-bold mb-3">Ready to Transform Your Operations?</h2>
+                    <p class="lead mb-0" style="max-width: 650px; opacity: 0.9;">Let's discuss how our engineering expertise and strategic partnerships can drive your next project to success.</p>
+                </div>
+                <div class="col-12 col-lg-4 text-lg-end">
+                    <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-lg-end">
+                        <a class="btn btn-primary btn-lg px-4" href="contact">
+                            <span class="me-2">Contact Us</span>
+                            <span>→</span>
+                        </a>
+                        <a class="btn btn-outline-light btn-lg px-4" href="services">
+                            View Services
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a class="btn btn-primary" href="contact">Contact Us</a>
         </div>
     </section>
 }
