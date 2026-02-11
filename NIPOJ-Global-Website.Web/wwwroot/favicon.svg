@@ -1,0 +1,28 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="oceanGrad" cx="50%" cy="30%">
+            <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0c2340;stop-opacity:1" />
+        </radialGradient>
+        <radialGradient id="landGrad" cx="50%" cy="40%">
+            <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#c5a253;stop-opacity:1" />
+        </radialGradient>
+        <radialGradient id="glossGrad" cx="40%" cy="30%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+        </radialGradient>
+    </defs>
+    
+    <!-- Globe Background -->
+    <circle cx="32" cy="32" r="28" fill="url(#oceanGrad)" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <!-- Continents -->
+    <path d="M 20 18 Q 25 24 20 30 Q 15 24 20 18 M 40 14 Q 46 18 45 26 Q 40 22 40 14 M 12 28 L 52 28" fill="url(#landGrad)" opacity="0.9"/>
+    <ellipse cx="26" cy="18" rx="12" ry="7" fill="url(#landGrad)" opacity="0.85"/>
+    <ellipse cx="40" cy="28" rx="9" ry="6" fill="url(#landGrad)" opacity="0.75"/>
+    <ellipse cx="22" cy="38" rx="8" ry="5" fill="url(#landGrad)" opacity="0.8"/>
+    
+    <!-- Gloss overlay -->
+    <circle cx="32" cy="32" r="28" fill="url(#glossGrad)" opacity="0.6"/>
+</svg>
