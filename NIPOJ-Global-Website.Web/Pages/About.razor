@@ -1,0 +1,57 @@
+@page "/about"
+
+<PageTitle>About</PageTitle>
+
+@if (content is null)
+{
+    <p class="text-muted">Loading content...</p>
+}
+else
+{
+    <div class="page-hero">
+        <h1 class="display-6 fw-semibold">About @content.CompanyName</h1>
+        <p class="text-muted mb-0">@content.AboutText</p>
+    </div>
+
+    <section class="page-section">
+        <h2 class="h5 text-uppercase text-primary">Mission & Vision</h2>
+        <p class="text-muted mb-0">@content.MissionText</p>
+    </section>
+
+    <section class="page-section">
+        <h2 class="h5 text-uppercase text-primary">Core Competencies</h2>
+        <div class="row g-3">
+            @foreach (var competency in content.CoreCompetencies)
+            {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature-card border rounded-3 p-3 h-100 bg-white shadow-sm">
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="badge rounded-pill bg-primary">?</span>
+                            <div>
+                                <h3 class="h6 mb-1">@competency</h3>
+                                <p class="text-muted mb-0">@content.Tagline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section class="page-section">
+        <h2 class="h5 text-uppercase text-primary">Strategic Partnerships</h2>
+        <p class="text-muted mb-0">@content.PartnershipsText</p>
+    </section>
+}
+
+@code {
+    [Inject]
+    public ContentService ContentService { get; set; } = default!;
+
+    private SiteContent? content;
+
+    protected override async Task OnInitializedAsync()
+    {
+        content = await ContentService.GetContentAsync();
+    }
+}

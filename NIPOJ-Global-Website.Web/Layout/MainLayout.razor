@@ -1,0 +1,52 @@
+﻿@inherits LayoutComponentBase
+@inject AssetManifestService AssetManifestService
+@inject ContentService ContentService
+<div class="page">
+    <header class="site-header">
+        <NavMenu />
+    </header>
+
+    <main class="site-main">
+        <div class="container py-4">
+            @if (isInitializing)
+            {
+                <p class="text-muted">Loading content...</p>
+            }
+            else if (!string.IsNullOrWhiteSpace(ContentService.Error))
+            {
+                <div class="alert alert-danger" role="alert">
+                    Unable to load site content. @ContentService.Error
+                </div>
+            }
+            else
+            {
+                @Body
+            }
+        </div>
+    </main>
+
+    <footer class="site-footer border-top">
+        <div class="container py-3 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+            <div class="d-flex align-items-center gap-2">
+                @if (!string.IsNullOrWhiteSpace(assetManifest?.Logo))
+                {
+                    <img src="@assetManifest.Logo" alt="NIPOJ Global logo" class="footer-logo" />
+                }
+                <span class="text-muted">© @DateTime.Now.Year NIPOJ Global</span>
+            </div>
+            <span class="text-muted">[BROCHURE_TEXT:FOOTER_TAGLINE]</span>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private AssetManifest? assetManifest;
+    private bool isInitializing = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ContentService.InitializeAsync();
+        assetManifest = await AssetManifestService.GetManifestAsync();
+        isInitializing = false;
+    }
+}

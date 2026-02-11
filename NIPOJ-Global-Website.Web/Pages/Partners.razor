@@ -1,0 +1,67 @@
+@page "/partners"
+
+<PageTitle>Partners</PageTitle>
+
+@if (content is null || assetManifest is null)
+{
+    <p class="text-muted">Loading content...</p>
+}
+else
+{
+    <div class="page-hero">
+        <h1 class="display-6 fw-semibold">Partners</h1>
+        <p class="text-muted mb-0">@content.PartnershipsText</p>
+    </div>
+
+    <div class="page-section">
+        <h2 class="h5 text-uppercase text-primary mb-3">Certifications</h2>
+        <ul class="text-muted mb-0">
+            @foreach (var certification in content.Certifications)
+            {
+                <li>@certification</li>
+            }
+        </ul>
+    </div>
+
+    @if (assetManifest.Certs.Any())
+    {
+        <div class="page-section">
+            <h2 class="h5 text-uppercase text-primary mb-4">Partner & Certification Badges</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center text-center">
+                @foreach (var cert in assetManifest.Certs)
+                {
+                    <div class="col">
+                        <div class="card h-100 shadow-sm image-card border-0">
+                            <img class="card-img-top" src="@cert" alt="Certification badge" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    <div class="page-section">
+        <h2 class="h5 text-uppercase text-primary mb-3">Partnerships</h2>
+        <p class="text-muted mb-0">@content.PartnershipsText</p>
+    </div>
+}
+
+@code {
+    [Inject]
+    public ContentService ContentService { get; set; } = default!;
+
+    [Inject]
+    public AssetManifestService AssetManifestService { get; set; } = default!;
+
+    private SiteContent? content;
+    private AssetManifest? assetManifest;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var contentTask = ContentService.GetContentAsync();
+        var manifestTask = AssetManifestService.GetManifestAsync();
+        await Task.WhenAll(contentTask, manifestTask);
+        content = contentTask.Result;
+        assetManifest = manifestTask.Result;
+    }
+}

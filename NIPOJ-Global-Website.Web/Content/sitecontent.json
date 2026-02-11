@@ -1,0 +1,58 @@
+{
+  "CompanyName": "NIPOJ GLOBAL SERVICES LIMITED",
+  "RCNumber": "481696",
+  "Established": "2003",
+  "Tagline": "Engineering, maritime, oil & gas, and power solutions delivered with safety, precision, and sustainability.",
+  "AboutText": "NIPOJ GLOBAL SERVICES LIMITED was established in 2003 as an indigenous engineering and technical services company providing support services to the Maritime, Oil & Gas, and Power sectors. The company is committed to delivering sustainable infrastructure solutions through highly skilled professionals, modern technology, and operational excellence.",
+  "MissionText": "Our mission is to provide world-class engineering, maritime, oil & gas, and power transmission services that meet international standards while promoting safety, efficiency, and environmental responsibility. We are dedicated to delivering reliable power transmission and renewable energy solutions that support industrial growth and community development.",
+  "CoreCompetencies": [
+    "Asset protection and infrastructure security",
+    "Personnel safety and compliance",
+    "Technology-driven innovation",
+    "Project management excellence",
+    "Sustainable operational practices",
+    "Regulatory compliance and environmental stewardship"
+  ],
+  "Services": [
+    {
+      "Category": "Maritime & Oil and Gas Support Services",
+      "Description": "Provision of marine logistics, offshore support, oil field services, asset protection, inspection, maintenance, and operational support to oil & gas facilities and maritime operations."
+    },
+    {
+      "Category": "Diving and Subsea Engineering Services",
+      "Description": "Professional diving operations, underwater inspection, maintenance and repair (IMR), subsea installation, and marine construction support executed with strict safety standards."
+    },
+    {
+      "Category": "Power Transmission & Renewable Energy Services",
+      "Description": "Engineering solutions for power transmission infrastructure, renewable energy systems, grid support services, and sustainable energy development projects."
+    }
+  ],
+  "QualityPolicyObjectives": [
+    "Deliver services that meet or exceed client expectations",
+    "Maintain strict adherence to safety and regulatory standards",
+    "Continuous improvement of operational processes",
+    "Develop competent and skilled workforce",
+    "Ensure environmental sustainability in all operations"
+  ],
+  "LocalContentPolicy": [
+    "Promote Nigerian workforce development",
+    "Support indigenous participation in projects",
+    "Encourage technology transfer and knowledge sharing",
+    "Comply with local regulatory requirements",
+    "Build strategic partnerships with local stakeholders"
+  ],
+  "Certifications": [
+    "DPR Registered Contractor",
+    "NOSDRA Compliant",
+    "COREN Registered",
+    "Other relevant industry certifications"
+  ],
+  "PartnershipsText": "NIPOJ GLOBAL SERVICES LIMITED maintains strategic partnerships with industry-leading organizations to enhance service delivery, technical capacity, and operational excellence.",
+  "Contact": {
+    "Address": "31A Oba Amachree Road, GRA Phase 2, Port Harcourt, Rivers State, Nigeria",
+    "Email": "info@nipojglobalservices.com",
+    "Phone1": "+234 803 000 0000",
+    "Phone2": "+234 805 000 0000",
+    "Website": "www.nipojglobalservices.com"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "logo": "assets/page12_img1.png",
+  "hero": "assets/page9_img2.jpeg",
+  "maritimeOilGas": "assets/page10_img1.jpeg",
+  "diving": "assets/page6_img1.jpeg",
+  "power": "assets/page11_img1.jpeg",
+  "certs": [
+    "assets/page12_img4.jpeg",
+    "assets/page12_img5.jpeg"
+  ]
+}

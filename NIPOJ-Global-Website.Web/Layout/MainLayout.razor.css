@@ -1,0 +1,14 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.site-main {
+    flex: 1;
+}
+
+.site-footer {
+    background-color: #ffffff;
+}

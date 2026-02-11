@@ -1,0 +1,56 @@
+@page "/policies"
+
+<PageTitle>Policies</PageTitle>
+
+@if (content is null)
+{
+    <p class="text-muted">Loading content...</p>
+}
+else
+{
+    <div class="page-hero">
+        <h1 class="display-6 fw-semibold">Policies</h1>
+        <p class="text-muted mb-0">@content.MissionText</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-lg-6">
+            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
+                <h2 class="h5 text-uppercase text-primary">Quality Policy & Objectives</h2>
+                <ul class="text-muted mb-0">
+                    @foreach (var item in content.QualityPolicyObjectives)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="border rounded-3 p-4 h-100 bg-white shadow-sm">
+                <h2 class="h5 text-uppercase text-primary">Local Content Policy</h2>
+                <ul class="text-muted mb-0">
+                    @foreach (var item in content.LocalContentPolicy)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-primary" href="assets/company-profile.pdf" target="_blank" rel="noopener noreferrer">Download Company Profile</a>
+    </div>
+}
+
+@code {
+    [Inject]
+    public ContentService ContentService { get; set; } = default!;
+
+    private SiteContent? content;
+
+    protected override async Task OnInitializedAsync()
+    {
+        content = await ContentService.GetContentAsync();
+    }
+}

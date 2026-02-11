@@ -1,0 +1,44 @@
+@page "/competencies"
+
+<PageTitle>Competencies</PageTitle>
+
+@if (content is null)
+{
+    <p class="text-muted">Loading content...</p>
+}
+else
+{
+    <div class="page-hero">
+        <h1 class="display-6 fw-semibold">Core Competencies</h1>
+        <p class="text-muted mb-0">@content.AboutText</p>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var competency in content.CoreCompetencies)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="feature-card border rounded-3 p-4 h-100 bg-white shadow-sm">
+                    <div class="d-flex align-items-start gap-3">
+                        <span class="badge rounded-pill bg-primary">?</span>
+                        <div>
+                            <h2 class="h6 mb-1">@competency</h2>
+                            <p class="text-muted mb-0">@content.Tagline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Inject]
+    public ContentService ContentService { get; set; } = default!;
+
+    private SiteContent? content;
+
+    protected override async Task OnInitializedAsync()
+    {
+        content = await ContentService.GetContentAsync();
+    }
+}
