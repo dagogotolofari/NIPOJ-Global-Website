@@ -85,12 +85,19 @@ body {
 
 .partners-hero {
     padding: 4.5rem 0 3rem;
-    background: linear-gradient(135deg, rgba(12, 35, 64, 0.05), rgba(12, 35, 64, 0.01));
-    border-bottom: 2px solid rgba(197, 162, 83, 0.3);
+    background: linear-gradient(135deg, rgba(12, 35, 64, 0.78), rgba(12, 35, 64, 0.35)), url('../assets/page10_img1.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid rgba(197, 162, 83, 0.45);
 }
 
 .partners-hero .section-divider {
     margin: 1.25rem 0 1.5rem;
+}
+
+.partners-hero h1,
+.partners-hero p {
+    color: #ffffff !important;
 }
 
 .kpi-strip {
