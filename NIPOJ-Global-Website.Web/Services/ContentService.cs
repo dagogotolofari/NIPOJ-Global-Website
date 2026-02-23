@@ -27,7 +27,7 @@ public class ContentService
         try
         {
             Error = null;
-            content = await httpClient.GetFromJsonAsync<SiteContent>("content/sitecontent.json");
+            content = await httpClient.GetFromJsonAsync<SiteContent>("Content/sitecontent.json");
             if (content is null)
             {
                 Error = "Site content could not be loaded.";
