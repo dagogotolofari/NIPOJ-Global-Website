@@ -8,75 +8,89 @@
 }
 else
 {
-    <div class="page-hero">
+    <section class="partners-hero">
         <div class="container">
-            <h1 class="fw-bold mb-3">Partners</h1>
-            <div class="section-divider"></div>
-            <p class="lead text-muted mb-0" style="max-width: 800px;">@content.PartnershipsText</p>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">Technical Partners</h1>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted mb-0" style="max-width: 760px;">Delivering local depth and international reach across energy, maritime, and power infrastructure.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="kpi-strip">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase small mb-1" style="letter-spacing: 0.12em; color: var(--brand-steel);">Partners</p>
+                    <h2 class="fw-bold mb-0">@PartnerCount</h2>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase small mb-1" style="letter-spacing: 0.12em; color: var(--brand-steel);">Countries</p>
+                    <h2 class="fw-bold mb-0">@CountryCount</h2>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-uppercase small mb-1" style="letter-spacing: 0.12em; color: var(--brand-steel);">Coverage</p>
+                    <h2 class="fw-bold mb-0">Local + International</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="page-section">
         <div class="container">
-            <h2 class="h3 fw-bold mb-3">Certifications</h2>
-            <div class="section-divider"></div>
-            <ul class="lead mb-0" style="line-height: 2;">
-                @foreach (var certification in content.Certifications)
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                <div>
+                    <h2 class="h3 fw-bold mb-2">Global Partner Network</h2>
+                    <p class="text-muted mb-0">Strategic alliances supporting project delivery, compliance, and operational excellence.</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                @foreach (var partner in content.TechnicalPartners)
                 {
-                    <li class="text-muted">@certification</li>
+                    <div class="col">
+                        <div class="partner-card border rounded p-4 h-100 bg-white">
+                            <h3 class="h5 fw-bold mb-2">@partner.Name</h3>
+                            <span class="badge bg-primary mb-3">@partner.Location</span>
+                            <p class="text-muted mb-0">Strategic Partner</p>
+                        </div>
+                    </div>
                 }
-            </ul>
+            </div>
         </div>
     </section>
 
-    @if (assetManifest.Certs.Any())
-    {
-        <section class="page-section" style="background-color: rgba(12, 35, 64, 0.02);">
-            <div class="container">
-                <h2 class="h3 fw-bold mb-3">Partner & Certification Badges</h2>
-                <div class="section-divider"></div>
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
-                    @foreach (var cert in assetManifest.Certs)
-                    {
-                        <div class="col">
-                            <div class="card h-100 border shadow-sm p-4 bg-white text-center">
-                                <img class="mx-auto" src="@cert" alt="Certification badge" style="max-height: 100px; object-fit: contain; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)';" onmouseout="this.style.filter='grayscale(100%)';" />
-                            </div>
-                        </div>
-                    }
+    <section class="page-section" style="background-color: rgba(12, 35, 64, 0.02);">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-12 col-lg-5">
+                    <h2 class="h3 fw-bold mb-3">Certifications</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-muted mb-0">Our certifications demonstrate compliance with critical regulatory agencies and the operational standards demanded by international energy partners.</p>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <ul class="list-unstyled mb-0" style="line-height: 2;">
+                        @foreach (var certification in content.Certifications)
+                        {
+                            <li class="text-muted">@certification</li>
+                        }
+                    </ul>
                 </div>
             </div>
-        </section>
-    }
+        </div>
+    </section>
 
     <section class="page-section">
         <div class="container">
-            <h2 class="h3 fw-bold mb-3">Partnerships</h2>
-            <div class="section-divider"></div>
-            <p class="lead text-muted mb-0" style="max-width: 800px; line-height: 1.8;">@content.PartnershipsText</p>
+            <div class="border rounded p-4 p-lg-5 bg-white shadow-sm">
+                <h2 class="h3 fw-bold mb-3">Partnership Approach</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-0" style="line-height: 1.8;">@content.PartnershipsText</p>
+            </div>
         </div>
     </section>
-
-    @if (content.TechnicalPartners.Any())
-    {
-        <section class="page-section">
-            <div class="container">
-                <h2 class="h3 fw-bold mb-3">Technical Partners</h2>
-                <div class="section-divider"></div>
-                <div class="row g-4 mt-2">
-                    @foreach (var partner in content.TechnicalPartners)
-                    {
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="border rounded p-4 h-100 bg-white shadow-sm">
-                                <h3 class="h6 fw-bold mb-2">@partner.Name</h3>
-                                <p class="text-muted mb-0">@partner.Location</p>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </section>
-    }
 }
 
 @code {
@@ -88,6 +102,12 @@ else
 
     private SiteContent? content;
     private AssetManifest? assetManifest;
+    private int PartnerCount => content?.TechnicalPartners.Count ?? 0;
+    private int CountryCount => content?.TechnicalPartners
+        .Select(partner => GetCountry(partner.Location))
+        .Where(country => !string.IsNullOrWhiteSpace(country))
+        .Distinct(StringComparer.OrdinalIgnoreCase)
+        .Count() ?? 0;
 
     protected override async Task OnInitializedAsync()
     {
@@ -96,5 +116,16 @@ else
         await Task.WhenAll(contentTask, manifestTask);
         content = contentTask.Result;
         assetManifest = manifestTask.Result;
+    }
+
+    private static string GetCountry(string location)
+    {
+        if (string.IsNullOrWhiteSpace(location))
+        {
+            return string.Empty;
+        }
+
+        var parts = location.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        return parts.Length > 0 ? parts[^1] : location.Trim();
     }
 }
