@@ -14,6 +14,7 @@ public class SiteContent
     public List<string> LocalContentPolicy { get; set; } = new();
     public List<string> Certifications { get; set; } = new();
     public string PartnershipsText { get; set; } = string.Empty;
+    public List<TechnicalPartner> TechnicalPartners { get; set; } = new();
     public ContactDetails Contact { get; set; } = new();
 }
 
@@ -30,4 +31,10 @@ public class ContactDetails
     public string Phone1 { get; set; } = string.Empty;
     public string Phone2 { get; set; } = string.Empty;
     public string Website { get; set; } = string.Empty;
+}
+
+public class TechnicalPartner
+{
+    public string Name { get; set; } = string.Empty;
+    public string Location { get; set; } = string.Empty;
 }

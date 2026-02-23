@@ -56,6 +56,27 @@ else
             <p class="lead text-muted mb-0" style="max-width: 800px; line-height: 1.8;">@content.PartnershipsText</p>
         </div>
     </section>
+
+    @if (content.TechnicalPartners.Any())
+    {
+        <section class="page-section">
+            <div class="container">
+                <h2 class="h3 fw-bold mb-3">Technical Partners</h2>
+                <div class="section-divider"></div>
+                <div class="row g-4 mt-2">
+                    @foreach (var partner in content.TechnicalPartners)
+                    {
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded p-4 h-100 bg-white shadow-sm">
+                                <h3 class="h6 fw-bold mb-2">@partner.Name</h3>
+                                <p class="text-muted mb-0">@partner.Location</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    }
 }
 
 @code {

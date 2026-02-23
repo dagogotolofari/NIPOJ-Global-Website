@@ -1,58 +1,100 @@
 {
   "CompanyName": "NIPOJ GLOBAL SERVICES LIMITED",
-  "RCNumber": "481696",
+  "RCNumber": "496585",
   "Established": "2003",
-  "Tagline": "Engineering, maritime, oil & gas, and power solutions delivered with safety, precision, and sustainability.",
-  "AboutText": "NIPOJ GLOBAL SERVICES LIMITED was established in 2003 as an indigenous engineering and technical services company providing support services to the Maritime, Oil & Gas, and Power sectors. The company is committed to delivering sustainable infrastructure solutions through highly skilled professionals, modern technology, and operational excellence.",
-  "MissionText": "Our mission is to provide world-class engineering, maritime, oil & gas, and power transmission services that meet international standards while promoting safety, efficiency, and environmental responsibility. We are dedicated to delivering reliable power transmission and renewable energy solutions that support industrial growth and community development.",
+  "Tagline": "Sustainable infrastructure. Operational excellence. Protection of life, assets, and the marine environment.",
+  "AboutText": "Established in 2003, NIPOJ Global Services Limited and its partners are leading providers of innovative solutions to Security Agencies across the Maritime, Oil & Gas, and Power sectors. We pride ourselves in the development of sustainable infrastructure that drive economic growth while upholding the highest quality and safety standards. Backed by a team of highly skilled professionals and a strong network of affiliates, we ensure seamless execution of projects, delivering cost-effective and cutting-edge solutions that meet the unique needs of our clients.",
+  "MissionText": "Our mission is to safely, sustainably, and efficiently explore, produce, and transport energy resources while delivering top-tier marine support services. We aim to drive operational excellence through innovation, environmental responsibility, and, above all, the protection of life, assets, and the marine environment.\n\nWe build and maintain power transmission lines and power sub-stations, while ensuring the efficient transportation of high-voltage electricity from power generation sources to distribution networks, ensuring a stable, sustainable, and continuous energy supply for communities and industries. We focus on infrastructure investment, modernization, and grid resilience.",
   "CoreCompetencies": [
-    "Asset protection and infrastructure security",
-    "Personnel safety and compliance",
-    "Technology-driven innovation",
-    "Project management excellence",
-    "Sustainable operational practices",
-    "Regulatory compliance and environmental stewardship"
+    "Assets Protection: Safeguarding critical infrastructure (Export Terminals, Rigs, Pipelines, Facilities, etc.) from theft, sabotage, and attack.",
+    "Personnel Safety: Prioritize the health and well-being of employees, contractors, and local communities.",
+    "Technological Innovation: Leveraging surveillance, AI, cyber security, and communication to provide real-time intelligence and proactive defense.",
+    "Operational Continuity: Ensuring uninterrupted energy supply and efficient operations for clients.",
+    "Integrity & Trust: Upholding high ethical standards in complex, often volatile regions.",
+    "Community Engagement: Building strong partnerships with local stakeholders and respecting human rights in areas of operation.",
+    "Services: Provide Maritime, Oil & Gas, Renewable Energy, and Power Transmission services."
   ],
   "Services": [
     {
-      "Category": "Maritime & Oil and Gas Support Services",
-      "Description": "Provision of marine logistics, offshore support, oil field services, asset protection, inspection, maintenance, and operational support to oil & gas facilities and maritime operations."
+      "Category": "Maritime & Oil and Gas Services",
+      "Description": "Our maritime and oil and gas services encompass specialized waterborne logistics, engineering, and support, including offshore pipeline protection and repair, vessel chartering, subsea inspections, and hazardous waste management. These services are critical for energy transportation, maintenance of offshore platforms, and ensuring safety in high-risk, deep-water environment."
     },
     {
-      "Category": "Diving and Subsea Engineering Services",
-      "Description": "Professional diving operations, underwater inspection, maintenance and repair (IMR), subsea installation, and marine construction support executed with strict safety standards."
+      "Category": "Diving / Underwater Operations",
+      "Description": "Anything that is in the water, our divers do. Our divers work with all support vessels. Diving is just a tool used by the industry to work underwater; with the enhanced dangers of depth, our divers are trained to multitask in their job skills and stay safe. The underwater environment is a dangerous environment, but it can be performed safely with knowledge of all aspects of the job at hand."
     },
     {
-      "Category": "Power Transmission & Renewable Energy Services",
-      "Description": "Engineering solutions for power transmission infrastructure, renewable energy systems, grid support services, and sustainable energy development projects."
+      "Category": "Power Transmission & Substations",
+      "Description": "We build and maintain power transmission lines and power sub-stations, while ensuring the efficient transportation of high-voltage electricity from power generation sources to distribution networks. We focus on infrastructure investment, modernization, and grid resilience to support a stable, sustainable, and continuous energy supply for communities and industries."
+    },
+    {
+      "Category": "Manpower Training & Development",
+      "Description": "Considering the dynamics and challenges associated with providing top quality services to a high network of companies, engineering and service related firms, NIPOJ has developed high level of efficiency in managing projects entrusted in our care. The thrust is to ensure a high level of service delivery by leveraging local expertise, bench marked against national and international standards at a competitive rate."
+    },
+    {
+      "Category": "Our Approach",
+      "Description": "Our services are provided by professionals and highly specialized staff with the use of advanced technologies to deliver unmatched services. We rely on new technology, modern equipment, skilled personnel, and a high level of professionalism to provide consulting services, execution of contract and subcontract jobs, including turn-key projects."
     }
   ],
   "QualityPolicyObjectives": [
-    "Deliver services that meet or exceed client expectations",
-    "Maintain strict adherence to safety and regulatory standards",
-    "Continuous improvement of operational processes",
-    "Develop competent and skilled workforce",
-    "Ensure environmental sustainability in all operations"
+    "Deploy modern technology, efficient and effective business procedures and process in order to meet client needs.",
+    "Ensure timely delivery of highest quality environmental and civil construction services to our customer’s satisfaction.",
+    "Adopt Quality Management System (QMS) that will enhance relationship with clients, regulatory authorities, and the general public.",
+    "Efficient allocation of resources (human, equipment, and finance) towards achieving client’s satisfaction."
   ],
   "LocalContentPolicy": [
-    "Promote Nigerian workforce development",
-    "Support indigenous participation in projects",
-    "Encourage technology transfer and knowledge sharing",
-    "Comply with local regulatory requirements",
-    "Build strategic partnerships with local stakeholders"
+    "Employing Nigerian personnel, wherever applicable as her staff and for the execution of all her projects.",
+    "Sub-contracting all her jobs, wherever applicable, to Nigerian companies.",
+    "The use of locally owned or locally sourced equipment, facilities and materials, wherever applicable for executing all her contracts.",
+    "Training and retraining of her total workforce to build their capabilities for the quality execution of her present and future jobs and that of other companies.",
+    "Encourage technology transfer from foreign companies/personnel to Nigerian companies/personnel in all her projects, to enable the local manufacturing of equipment and facilities."
   ],
   "Certifications": [
-    "DPR Registered Contractor",
-    "NOSDRA Compliant",
-    "COREN Registered",
-    "Other relevant industry certifications"
+    "Department of Petroleum Resources (DPR)",
+    "National Oil Spill Detection and Response Agency (NOSDRA)",
+    "Federal Ministry of Environment",
+    "Council of the Regulator of Engineering Nigeria (COREN)"
   ],
-  "PartnershipsText": "NIPOJ GLOBAL SERVICES LIMITED maintains strategic partnerships with industry-leading organizations to enhance service delivery, technical capacity, and operational excellence.",
+  "PartnershipsText": "For efficiency, timeliness, and better results, NIPOJ recognizes the need for synergy of activities. This has led to the formation of technical partnerships with both local and foreign firms to ensure our smooth operation.",
+  "TechnicalPartners": [
+    {
+      "Name": "Al-African Oil, Gas & Consulting Technical Services Co.",
+      "Location": "Istanbul, Turkey"
+    },
+    {
+      "Name": "Hybrid Concepts - Artificial Intelligence System (AIS).",
+      "Location": "Sandton, South Africa"
+    },
+    {
+      "Name": "Merikel Energy & Maritime Engineering Technology",
+      "Location": "USA"
+    },
+    {
+      "Name": "Nigerian National Petroleum Corporation Limited",
+      "Location": "FCT, Nigeria"
+    },
+    {
+      "Name": "KALOS International",
+      "Location": "S.L, Spain"
+    },
+    {
+      "Name": "Nigerian Police On Green Initiative",
+      "Location": "FCT, Nigeria"
+    },
+    {
+      "Name": "Rural Electrification Agency",
+      "Location": "Nigeria"
+    },
+    {
+      "Name": "Yiming International Co. Limited",
+      "Location": "China"
+    }
+  ],
   "Contact": {
-    "Address": "31A Oba Amachree Road, GRA Phase 2, Port Harcourt, Rivers State, Nigeria",
-    "Email": "info@nipojglobalservices.com",
-    "Phone1": "+234 803 000 0000",
-    "Phone2": "+234 805 000 0000",
-    "Website": "www.nipojglobalservices.com"
+    "Address": "House 1B, No. 5 Uruguay Crescent, Maitama, Abuja, FCT. Nigeria.",
+    "Email": "info@nipojglobal.com",
+    "Phone1": "+234 803 530 6165",
+    "Phone2": "+234 803 322 3754",
+    "Website": "www.nipojglobal.com"
   }
 }

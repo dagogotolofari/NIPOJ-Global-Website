@@ -97,7 +97,8 @@ else
     private void HandleValidSubmit()
     {
         var body = $"Name: {formModel.Name}\nEmail: {formModel.Email}\nPhone: {formModel.Phone}\n\nMessage:\n{formModel.Message}";
-        var mailto = $"mailto:info@nipojglobalservices.com?subject={Uri.EscapeDataString("Website Inquiry")}&body={Uri.EscapeDataString(body)}";
+        var recipient = content?.Contact.Email ?? string.Empty;
+        var mailto = $"mailto:{recipient}?subject={Uri.EscapeDataString("Website Inquiry")}&body={Uri.EscapeDataString(body)}";
         NavigationManager.NavigateTo(mailto, true);
     }
 
